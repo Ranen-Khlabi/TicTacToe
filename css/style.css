@@ -1,0 +1,127 @@
+/* for all page */
+*{
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* design for music */
+.music-toggle{
+  cursor: pointer;
+  font-size: 10px;
+  position:relative;
+  color: beige;
+  margin-right: 5px;
+  align-items: inherit;
+}
+
+
+h1{
+  color: beige;
+  font-size: 54px;
+  text-align: center;
+  /* display: table-caption; */
+
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: url('https://i.imgur.com/ORrNnYA.png');
+  background-repeat: repeat;
+}
+
+
+.container{
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: 33% 33% 33%;
+  margin: auto;
+}
+.cell{
+  position: relative;
+  background-color: #a5c4735e;
+  cursor: pointer;
+}
+.cell::before{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 8rem;
+}
+.cell.x::before{
+  content: "X";
+}
+.cell.o::before{
+  content: "O";
+}
+
+/* .winner-box-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+} */
+
+.winner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 400px;
+  height: 200px;
+  padding: 20px 40px;
+  background-color: #fff;
+  font-size: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  animation: animate .5s linear;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+
+/* for animation */
+@keyframes animate{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.winner button{
+  margin-top: 20px;
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(40, 97, 97, 0.63);
+}
+
+
+.footer {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 12px;
+  text-align: center;
+  color: beige;
+}
