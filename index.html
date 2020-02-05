@@ -9,15 +9,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
     <!-- Create audio for browser -->
-    <div class="music-toggle"><a onClick="togglePlay()" id="toggle" data-text-swap="Music on">Music off</a></div>
-<!-- </div> -->
+    <div class="music-toggle">
+      <a onClick="togglePlay()" id="toggle" data-text-swap="Music on">
+        Music off
+      </a>
+    </div>
+    <!-- Add audio -->
 <audio id="music" loop="loop" 
 src="IntroScreen.mp3"></audio>
 
-     <!-- title -->
-    <div id="titel"> <h1>Tic Tac Toe Game</h1> </div>   
 
+
+
+    <!-- title -->
+           <div> <h1>Tic Tac Toe Game</h1> </div>   
+
+    <!-- Container -->
     <div class="container">
         <div class="cell" data-index="1"></div>
         <div class="cell" data-index="2"></div>
@@ -35,7 +45,6 @@ src="IntroScreen.mp3"></audio>
         <h4 class="text-center" style="margin-top:5%;">Coded with ❤ By Ranen Khlabi</h4>
       </div>
       <div class="winner-box-container">
-        
       </div>
    
 <script src="js/main.js"></script>
