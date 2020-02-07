@@ -36,7 +36,6 @@ button.addEventListener('click', function() {
 }, false);
 
 
-
 //*************************************************************************//
 
 
@@ -79,7 +78,6 @@ function check(array){
 
 
 //*************************************************************************//
-
 
 
 //Create function for bottun if win, lose or tie 

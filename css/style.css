@@ -1,7 +1,7 @@
 /* for all page */
 *{
   box-sizing: border-box;
-  font-family: 'Droid serif', serif;
+  /* font-family: 'Droid serif', serif; */
 }
 
 /* design for music */
@@ -31,7 +31,8 @@ body{
   justify-content: center;
   align-items: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pdflowerset16-gloy-03-leaves.png?auto=&bg=transparent&con=3&cs=srgb&dpr=1&fm=png&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1200&s=22066eda8f50c01f8572956aac48881d'), url('https://i.imgur.com/ORrNnYA.png');
+  background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pdflowerset16-gloy-03-leaves.png?auto=&bg=transparent&con=3&cs=srgb&dpr=1&fm=png&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1200&s=22066eda8f50c01f8572956aac48881d'),
+                    url('https://i.imgur.com/ORrNnYA.png');
   /* background-position: center; */
   background-repeat: no-repeat, repeat;
 }
@@ -46,10 +47,29 @@ body{
   grid-auto-rows: 33% 33% 33%;
   margin: auto;
 }
+
+@media screen and (max-width: 415px){
+  .container{
+    width: 300px;
+    height: 300px;
+  }
+  .cell.x::before{
+    font-size: 70px;
+  }
+  .cell.o::before{
+    font-size: 70px;
+  }
+  .winner{
+    position: absolute;
+    left: 4px;
+  }
+
+}
 .cell{
   position: relative;
   background-color: #a5c4735e;
   cursor: pointer;
+  border-radius: 15%;
 }
 .cell::before{
   position: absolute;
@@ -96,6 +116,7 @@ body{
     opacity: 1;
   }
 }
+
 .winner button{
   margin-top: 20px;
   width: 80px;
