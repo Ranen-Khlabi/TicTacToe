@@ -1,5 +1,5 @@
-var music = document.getElementById("music");
-var isPlaying = false;
+let music = document.getElementById("music");
+let isPlaying = false;
 music.volume = 0.2;
 
 
@@ -25,7 +25,7 @@ music.onpause = function() {
 };
 
 //Create 'button' to swap between on & of
-var button = document.getElementById("toggle");
+let button = document.getElementById("toggle");
 button.addEventListener('click', function() {
   if (button.getAttribute("data-text-swap") == button.innerHTML) {
     button.innerHTML = button.getAttribute("data-text-original");
@@ -123,7 +123,7 @@ function tie(){
 
     //check the first play " X " if win show the message 
     if(check(firstPlayer)){        
-        winnerpleyr("Congrats X Win :)");
+        winnerpleyr("Congrats X Win :) refresh the Page" );
     //add removeEventListener when " X " is win
         cells.forEach(cell => cell.removeEventListener("click", tie));
         return true;
@@ -134,7 +134,7 @@ function tie(){
 
     //check the first play " O " if win show the message 
     if(check(secondPlayer)){
-        winnerpleyr("Congrats O Win :)");
+        winnerpleyr("Congrats O Win :) refresh the Page");
     //add removeEventListener when " O " is win
         cells.forEach(cell => cell.removeEventListener("click", tie));
         return true;

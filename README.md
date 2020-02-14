@@ -8,6 +8,7 @@ List technologies used to build tic tac toe I used:
 - css 
 - js with DOM
 
+---
 
 # user stories:
 
@@ -21,7 +22,9 @@ player can play again if he/she clicked on Replay button
 
 player can turn music if he/she clicked on (music on) button
 
+Here is the like to the game. [The Game] (https://ranen-khlabi.github.io/TicTacToe/)
 
+---
 
 ### develpment process
 
@@ -33,7 +36,14 @@ player can turn music if he/she clicked on (music on) button
 
 * I created methode call winnerpleyr to looking for winner in each time the user add on squre to find the winner
 
+---
 
 # List unsolved problems which would be fixed in future iterations:
 * counting the winning in playing with computer case.
 * player choose the Mark "X" or "O" then start Game.
+
+---
+
+## Resources
+
+- **[MDN JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
