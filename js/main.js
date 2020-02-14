@@ -107,7 +107,7 @@ function winnerpleyr(p){
 //Create function 
 function tie(){
 //Add sound when click " X "
-  let soundEiv = new Audio('Finger.mp3')
+  let soundEiv = new Audio('audio/Finger.mp3')
 
   if(this.classList == "cell"){
     count++;
