@@ -94,6 +94,7 @@ function winnerpleyr(p){
   // replay.setAttribute("onclick","rep();");
   replay.onclick = function() { 
     rep() 
+    location.reload();
   };
   modal.appendChild(replay);
   document.body.appendChild(modal);
@@ -107,13 +108,11 @@ function winnerpleyr(p){
 //Create function 
 function tie(){
 //Add sound when click " X "
-  let soundEiv = new Audio('audio/Finger.mp3')
+  let soundEiv = new Audio('audio/club.mp3')
 
   if(this.classList == "cell"){
     count++;
     if(count%2 !== 0){
-//sound when " X " click
-      soundEiv.play();
       this.classList.add("x");
       firstPlayer.push(Number(this.dataset.index));
 
@@ -123,7 +122,8 @@ function tie(){
 
     //check the first play " X " if win show the message 
     if(check(firstPlayer)){        
-        winnerpleyr("Congrats X Win :) refresh the Page" );
+        winnerpleyr("Congrats X Win ✌ refresh the Page" );
+        soundEiv.play();
     //add removeEventListener when " X " is win
         cells.forEach(cell => cell.removeEventListener("click", tie));
         return true;
@@ -134,7 +134,8 @@ function tie(){
 
     //check the first play " O " if win show the message 
     if(check(secondPlayer)){
-        winnerpleyr("Congrats O Win :) refresh the Page");
+        winnerpleyr("Congrats O Win ✌ refresh the Page");
+        soundEiv.play();
     //add removeEventListener when " O " is win
         cells.forEach(cell => cell.removeEventListener("click", tie));
         return true;
@@ -143,7 +144,7 @@ function tie(){
 
     //message when tie
     if(count === 9){
-      winnerpleyr("Tie :(");
+      winnerpleyr("Oops tied 😁");
     }
   }
 }

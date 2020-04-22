@@ -1,7 +1,27 @@
 /* for all page */
 *{
   box-sizing: border-box;
-  /* font-family: 'Droid serif', serif; */
+  font-family: sans-serif;
+}
+
+html{
+  background-image: url('../img/sunsit.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: url('../img/sunsit.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* design for music */
@@ -21,23 +41,6 @@ h1{
   text-align: center;
 }
 
-
-body{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  background-image: url('../img/Tic-Tac-Toe.png'),
-                    url('../img/ORrNnYA.png');
-  /* background-position: center; */
-  background-repeat: no-repeat, repeat;
-}
-
-
 .container{
   width: 500px;
   height: 500px;
@@ -48,29 +51,13 @@ body{
   margin: auto;
 }
 
-@media screen and (max-width: 415px){
-  .container{
-    width: 300px;
-    height: 300px;
-  }
-  .cell.x::before{
-    font-size: 70px;
-  }
-  .cell.o::before{
-    font-size: 70px;
-  }
-  .winner{
-    position: absolute;
-    left: 4px;
-  }
-
-}
 .cell{
   position: relative;
-  background-color: #a5c4735e;
+  background-color: rgba(218, 208, 208, 0.651);
   cursor: pointer;
   border-radius: 15%;
 }
+
 .cell::before{
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
@@ -80,13 +67,16 @@ body{
   font-weight: bold;
   font-size: 8rem;
 }
+
 .cell.x::before{
   content: "X";
-}
-.cell.o::before{
-  content: "O";
+  color: rgb(219, 118, 135);
 }
 
+.cell.o::before{
+  content: "O";
+  color: rgb(121, 51, 121);
+}
 
 .winner{
   display: flex;
@@ -97,24 +87,15 @@ body{
   width: 400px;
   height: 200px;
   padding: 20px 40px;
-  background-color: #fff;
+  background-color: rgb(106, 91, 170);
   font-size: 2rem;
+  color: #fff;
   border-radius: 20px;
   text-align: center;
   animation: animate .5s linear;
   position: absolute;
   top: 40%;
   left: 35%;
-}
-
-/* for animation */
-@keyframes animate{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
 }
 
 .winner button{
@@ -128,13 +109,46 @@ body{
   border-radius: 20px;
   cursor: pointer;
   color: #fff;
-  background-color: rgba(40, 97, 97, 0.63);
+  background-color: rgb(219, 118, 135);
 }
-
 
 .footer {
   font-family: 'Shadows Into Light', cursive;
   font-size: 12px;
   text-align: center;
   color: beige;
+}
+
+@media screen and (max-width: 415px){
+  .container{
+    width: 300px;
+    height: 300px;
+  }
+  .cell.x::before{
+    font-size: 70px;
+  }
+  .cell.o::before{
+    font-size: 70px;
+  }
+  div.winner{
+    position: absolute;
+    left: 4px;
+    width: 350px;
+    height: 200px;
+  }
+  body{
+    background-image: url('../img/sunsit2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* for animation */
+@keyframes animate{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
