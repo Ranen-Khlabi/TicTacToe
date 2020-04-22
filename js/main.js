@@ -122,7 +122,7 @@ function tie(){
 
     //check the first play " X " if win show the message 
     if(check(firstPlayer)){        
-        winnerpleyr("Congrats X Win ✌ refresh the Page" );
+        winnerpleyr("Congrats X Win ✌" );
         soundEiv.play();
     //add removeEventListener when " X " is win
         cells.forEach(cell => cell.removeEventListener("click", tie));
@@ -134,7 +134,7 @@ function tie(){
 
     //check the first play " O " if win show the message 
     if(check(secondPlayer)){
-        winnerpleyr("Congrats O Win ✌ refresh the Page");
+        winnerpleyr("Congrats O Win ✌");
         soundEiv.play();
     //add removeEventListener when " O " is win
         cells.forEach(cell => cell.removeEventListener("click", tie));
