@@ -8,11 +8,12 @@
 * CSS
 * JavaScript
 
-## Wireframes
+## Wireframe
 ![Wireframes](wireframes.png)
+
+## Mockup
 ![Wireframes](game1.png)
 ![Wireframes](game2.png)
-###### it's Responsive
 ![Wireframes](responsive.png)
 
 ## User Story
